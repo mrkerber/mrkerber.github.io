@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Matthew Kerber</title>
+    
+    <link rel="icon" href="img/BeachPic.png" />
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        
+    <link href='http://fonts.googleapis.com/css?family=Fira+Mono|Nova+Mono|Nunito:300' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    
+    <style>
+        @media screen and (max-width:992px){
+            #prof, h1{
+                margin-left: 0px !important;
+            }
+            #info {
+                padding: 20px 20px 0 20px !important;
+            }
+            #arrow{
+                margin-top: -30px !important;
+            }
+        }
+        p{
+            font-size: 1.2em;
+        }
+        body{
+            color: rgb(220,220,220);
+            text-align: justify;
+            background-color: black;
+            font-family: "Nunito", sans-serif;
+            display: none;
+        }
+        html{
+            background-color: black;
+        }
+        .navright{
+            color: rgb(180,180,180);
+            margin-right: 10px;
+        }
+        .violet{
+            color: rgb(210,180,210);
+        }
+        .blue{
+            color: rgb(180,180,210);
+        }
+        .green{
+            color: rgb(180,210,180);
+        }
+        .yellow{
+            color: rgb(210,210,180);
+        }
+        .red{
+            color: rgb(230,180,180);
+        }
+        .glyphicon-road {
+            color: white;
+            margin-bottom: -20px;
+        }
+        .nav li{
+            margin: 0px 10px 0px 10px;
+            font-family: "Fira Mono";
+        }
+        .navbar .navbar-nav{
+            text-align: center;
+            display: inline-block;
+        }
+        .contentContainer {
+            margin-top: 50px;
+            width: 100%;
+        }
+        .up{
+            background-image: url("img/mountainsGreen.png");
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        .down{
+            background-image: url("img/mountainsScaledDown.jpg");
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        .center {
+            text-align: center;
+        }
+        #prof{
+            margin-top: 80px;
+            margin-bottom: 20px;
+            margin-left: 75px;
+            width: 200px;
+        }
+        h1{
+            color: rgb(200,200,200);
+            font-family: "Nova Mono";
+            margin-top: 55px;
+            margin-left: 75px;
+            font-size: 3.3em;
+        }
+        h2{
+            color: rgb(200,200,200);
+            font-family: "Fira Mono";
+            font-size: 1.5em;
+        }
+        .logo{
+            margin-top: 10px;
+        }
+        #kerber{
+            font-family: "Fira Mono";
+        }
+        #info{
+            padding: 80px 40px 0 0;
+        }
+        .spacing{
+            height: 60px;
+        }
+        #arrow{
+            margin-top: 180px;
+        }
+        #current{
+            height: 250px;
+            border: groove rgba(180,180,180,.2) 3px;
+            border-radius: 30px;
+        }
+        .pBorder{
+            border: solid rgb(100,100,100) 2px;
+            margin-bottom: 10px;
+        }
+        .modal-backdrop{
+           background-color: rgb(50,50,50);
+        }
+        .modal{
+            color: rgb(175,175,175);
+        }
+        .modal-content{
+            background-color: rgba(30,40,30,.7);
+        }
+        .modal-header{
+            border-color: rgb(100,100,100);
+        }
+        .modal-footer{
+            border-color: rgb(100,100,100);
+        }
+        .modal-title{
+            text-align: center;
+        }
+        #recentImg{
+            width: 500px;
+            height: 150px;
+            border: solid rgba(180,180,180,.4) 2px;
+            padding: 2px;
+            float: right;
+            margin-right: 100px;
+        }
+        #about{
+            display: none;
+            height: 400px;
+        }
+        .logoCon{
+            height: 400px;
+        }
+        .story{
+
+        }
+        .storyIcon{
+            width: 200px;
+        }
+        
+    </style>
+    
+  </head>
+  
+  <body>
+    
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="" class="navbar-brand" id="kerber">KERBER</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="glyphicon glyphicon-road"></span>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><span class="glyphicon glyphicon-home navright violet"></span>Home</a></li>
+                    <li><a href="projects.html"><span class="glyphicon glyphicon-briefcase navright blue"></span>Projects</a></li>
+                    <li class="active"><a href="#top" class="smoothScroll"><span class="glyphicon glyphicon-book navright green"></span>Stories</a></li>
+                    <li><a href="films.html"><span class="glyphicon glyphicon-film navright yellow"></span>Short Films</a></li>
+                    <li><a href="https://soundcloud.com/letterman-1"><span class="glyphicon glyphicon-fire navright red"></span>Music</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container contentContainer up" id="top">
+        <div class="row">
+            <div class="col-md-6 center">
+                <div class="logoCon">
+                    <div class="logo">
+                        <img id="prof" src="img/code.png"/>
+                    </div>
+                    <h1 class="logo">WRITINGS</h1>
+                </div>
+                <div id="about">
+                    INFORMATION
+                </div>
+            </div>
+            <div id="info" class="col-md-6">
+              
+                <div class="row">
+                    <div>
+                        <a href="" data-toggle="modal" data-target="#snowmen"><img id="recentImg" src="img/snowBanner.png"/></a>
+                    </div>
+                </div>  
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 center">
+                <a href="#mid" class="smoothScroll"><img id="arrow" src="img/arrow.png" onmouseover="this.src='img/arrowOpaque.png'" onmouseout="this.src='img/arrow.png'"/></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container contentContainer" id="mid">
+        <div class="spacing"></div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2 story">
+                <a href="" data-toggle="modal" data-target="#snowmen"><img src="img/snowIcon.png" class="storyIcon"/></a>
+            </div>
+            <div class="col-md-2 story">
+                <a href="" data-toggle="modal" data-target="#worldEnd"><img src="img/treeIcon.png" class="storyIcon"/></a>
+            </div>
+            <div class="col-md-2 story">
+                <a href="" data-toggle="modal" data-target="#hooky"><img src="img/boatIcon.png" class="storyIcon"/></a>
+            </div>
+        </div>
+        
+        <div class="spacing"></div>
+        
+        <div class="row">
+            <div class="col-md-2 col-md-offset-4 story">
+                <a href="http://www.eventhorizonmag.com/?article=purple"><img src="img/purpIcon.png" class="storyIcon"/></a>
+            </div>
+            <div class="col-md-2 story">
+                <a href="" data-toggle="modal" data-target="#gouyen"><img src="img/desertIcon.png" class="storyIcon"/></a>
+            </div>
+            <div class="col-md-2 story">
+                New
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="container contentContainer down" id="bottom">
+        
+    </div>
+    
+    <div class="modal fade" id="snowmen">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">
+                <span class="glyphicon glyphicon-off"></span>
+              </button>
+              <h4 class="modal-title">
+                
+                  <p class=MsoNoSpacing style='text-align:justify'><span
+                  style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                  
+                  Snowmen
+              
+              </h4>
+            </div>
+            
+            <div class="modal-body">
+                
+                <div class=WordSection1>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>School was
+                    cancelled. The two boys tugged on gloves and wrestled boots over two layers of
+                    pants. The night before had been devoted to finishing the weekend's homework,
+                    but they woke up to three and a half feet of fresh powder. It was the month
+                    before summer, less than a month before school let out; the kind of unexpected
+                    snowfall a kid could only dream of. They chattered about meeting their friends
+                    on the school football field, the pack-ability of the snow, whether it would
+                    stop anytime soon, while rushing to get out the door and into the cold.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Their parents
+                    stood by the couch watching them pull caps down to their eyes.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"You're not going
+                    to work today Dad, right?" Garrett asked, straightening his black wool hat,
+                    while at the same time upsetting Andrew's, ruffling the younger brother's long
+                    hair out of the edges.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>He shrugged and
+                    shook his head. Their mother sat on the arm of the couch looking out the window
+                    at the snow drifts piling up to the bottom of the sill. It had almost reached
+                    the glass, pellets of ice gathering on top of each other in the middle of May,
+                    billions of unique flakes forming one solid blanket over their town and over
+                    North Carolina, maybe the world. Not enough to trap them inside, but just
+                    enough to keep them home.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Well we're gonna
+                    go." Garrett stood edging to the doorway, Andrew close next to him.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>The parents both
+                    nodded, their mother's eyes turning from the window back in their direction.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>They headed
+                    outside. Andrew shut the door soft against the ice.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing align=center style='text-align:center'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>*</span></p>
+                    
+                    <p class=MsoNoSpacing align=center style='text-align:center'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>The parents went
+                    into the kitchen.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Cheryl made coffee
+                    on the gas stove. Frasier sat down at the table. They watched the snow falling
+                    outside.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>He poured himself
+                    a cup and sat back down.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"You dreamt it too."
+                    Frasier looked up at her.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>His wife stood
+                    with her back against the sink, a white diner mug of coffee warming her hands.
+                    She stared at the four day old flowers on the table. "I think so. Yes. I saw
+                    it. So did you."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>She sat down with
+                    him. They sipped their coffee together. Cheryl let silent tears fall onto her
+                    lap.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>The linoleum tiles
+                    looked gray against the white gleam from the windows.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing align=center style='text-align:center'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>**</span></p>
+                    
+                    <p class=MsoNoSpacing align=center style='text-align:center'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>It took them an
+                    hour to make the two mile walk to the high school. Their friends had dug out
+                    the powder down to the turf on the fifty yard line and were sitting in a
+                    semi-circle around a six-foot ball of snow. Andrew and Garrett trudged up
+                    towards them lobbing an endless salvo of snowballs in their direction. Bean,
+                    the shorter one, barely had to crouch down in the trench. Finn, taller than
+                    their mound of ice, had nowhere to hide.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>They started
+                    rolling up a second ball.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Man our parents
+                    were acting <i>weird</i> this morning." Andrew accented with a heave on the
+                    snow. "Mine too! They just sorta watched me leave," Bean said. Finn: "Same."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"They're just
+                    worried. This whole blizzard of the century in May," Garrett said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"But they didn't
+                    even seem concerned with us coming out here," Andrew said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"It's a once in a childhood
+                    kind of thing. I get that." Garrett stopped pushing the last ball of snow.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Bean and Andrew
+                    lifted the head from beneath. Finn stood on the bottom ball and hoisted over
+                    the mid-section. They gave it one final heave and it rolled into place. They
+                    stood back and admired it, wishing they had a carrot.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"What's wrong?"
+                    Andrew asked.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Garrett wasn't
+                    paying any attention to them. He stared up at the snowman's blank face. "I
+                    dreamt this would happen. I dreamt this all exactly." He trudged through the
+                    snow in a circle around the snowman. "We build this giant snowman," he motioned
+                    towards its head, "and we never put a face on it. And then we leave."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>He dropped his
+                    arms and stood as if waiting for it to speak to him.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'> "I did too," Finn
+                    said. "I remember it now." His deep voice startled them.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Me too. We build
+                    it and leave, and it just keeps snowing. It covers the snowman." Andrew sat
+                    down on the turf. "It doesn't ever stop. It just keeps snowing until," he
+                    paused. "Everything's buried."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>They stood with
+                    their backs to the wind watching the snow pile up at the base of the snowman.
+                    Other kids were playing in the field, enjoying the day.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Bean?"</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Bean nodded. "Me
+                    too."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>A group of younger
+                    kids, maybe even elementary, were near one of the goalposts building a snowman
+                    of their own. And another group on the other end.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Garrett got up and
+                    trudged off in the snow to one of them.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Hey kid!" He
+                    yelled out through the snowflakes.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>The kid hesitated
+                    and then started to work his way towards Garrett. He couldn't have been more
+                    than eight. "Yeah!"</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Did you dream
+                    about a snowman last night? Or snow?"</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Yeah! We all
+                    did." The kid smiled brighter than the gleam of the whiteness surrounding them.
+                    "It's going to snow forever!"</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Garrett waved to
+                    him and made his way back.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"What did he say?"
+                    They asked.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Yeah. They all
+                    dreamt it too. The snowman; the endless snow." Garrett sat back down with them
+                    in the semi-circle.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>The four sat with
+                    their legs tucked in tight to their bodies.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"What, so that's
+                    it? We're all screwed?" Finn threw a snowball at the snowman's blank stare.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Yeah. That's it,"
+                    Bean said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"It's just gonna
+                    keep snowing until everything's frozen?" Finn said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"You dreamt it
+                    too, man. We all saw it, we all know it. It's just gonna happen," Garrett hit a
+                    pile of snow, sending a cloud of powder into the air.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"But that's crazy.
+                    That's bullshit," Bean shook his head.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"It doesn't have
+                    to make sense. The snow keeps falling and the world doesn't wake up tomorrow.
+                    It makes about as much sense as anything else I can think of," Andrew leaned
+                    back and looked up into the heart of the sky, snowflakes catching on his
+                    eyelashes.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>They sat for a
+                    while, all searching for a way to protest, but no one speaking. There were more
+                    kids around now, maybe fifty or sixty. They laughed and fought and waited and
+                    struggled through the now four feet of snow on the field.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"That's it,"
+                    Garrett said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"That's it," Bean
+                    repeated, a bit softer.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>There were about a
+                    dozen giant snowmen either finished or being built all across the field.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "So what now?" Andrew asked,
+                    looking down from the sky.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Bean was studying
+                    a few flakes on his hand.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Finn had fallen
+                    backwards in the snow.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Garrett turned
+                    around from smoothing out the snowman. "I'll tell you what now." He reached
+                    down and got a handful of snow, gathering as much powder as he could in his
+                    hands, squeezed it together tight in his gloves, smoothed out the ball into a
+                    perfect sphere, then wound his arm back and flung it at Bean.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"We have the best
+                    snowball fight in the history of May."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>The four of them
+                    released a barrage of snowballs at every person they could see on the field.
+                    And every person they could see began to fire back.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing align=center style='text-align:center'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>***</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            Frasier put on his jacket.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "Where are you going?" Cheryl
+                    asked, standing by the door.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "I'm going next door to talk
+                    to Anne and Marty. Come with me."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            She put a coat and boots on
+                    and they went outside.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            Anne and Marty were struggling
+                    to roll up a giant ball of snow. They joined the couple without a word and
+                    began rolling up another. They stacked all three of them together.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "Do you have a carrot?"
+                    Frasier asked, breaking their silence.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "It doesn't need one," Anne
+                    and Cheryl said it at the same time and then smiled at each other.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            The four of them huddled close
+                    together as the snow fell on their work. There was a peaceful quiet, like a
+                    snowflake landing on the rest, followed by another, and another; an unending
+                    stream floating out of the greyness of the heavens, stopping only to catch its
+                    breath and then gust out over the world again.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "You guys have been great
+                    neighbors," Anne said. They all breathed easier once she had said it.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "You too," Frasier replied.
+                    "Really great."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "I have to say, y'all, I'm
+                    pretty scared." Marty said. He sighed and laughed a bit.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "We all are," Frasier said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "A snowstorm," Anne said in
+                    disbelief. "And I love snow. Did the sun just fizz out or something?"</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "I wish it mattered," Marty
+                    put his arm around her and kissed her on the side of the head. </span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Have y'all heard
+                    anything on the radio?" Frasier asked.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            Marty shook his head. "I found
+                    one AM station playing classical music, but everything else is silent."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "What are we going to say to
+                    the kids?" Cheryl laid her head on Frasier's shoulder.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "Nothing, I guess," Frasier
+                    said. "What is there really to say? Best to just let them enjoy the rest of
+                    their day off."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            They all hugged and went back
+                    inside their homes. Each of them stole a last glimpse at their snowman,
+                    standing tall and silent.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing align=center style='text-align:center'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>****</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            They had left the high school
+                    and were walking home. Finn stole one of the letters off of the high school
+                    sign advertising the upcoming rivalry baseball game because he had "always
+                    wanted to." Two blocks later he decided he felt bad and ran to put it back. A
+                    snowplow drove past. The four boys had to stop walking they were laughing so
+                    hard. It crawled by them, barely shifting the snow.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "That guy has to just be doing
+                    it for kicks," Bean said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "I bet they're gonna try and
+                    make us go to school tomorrow," Andrew said. The four had another bout of
+                    laughter.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            Everywhere they walked there
+                    were giant faceless snowmen; snowmen being built; people building snowmen;
+                    people standing and staring at the blank stare of a snowman as if it had just
+                    talked to them; staring at snowmen as if they should talk to it. There wasn't a
+                    single carrot in the city.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "So the world's doomed and
+                    everyone spends their last few hours building snowmen," Bean said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "That's what almighty mankind
+                    did in its final day. 7 billion people building a billion massive snowmen and
+                    not a single one could get it right," Andrew smiled.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "Do you guys thinks it's
+                    snowing in like Egypt or Sudan?" Garrett asked.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            They didn't question it. They
+                    all had seen it; down to the very last flake covering every blade of grass and
+                    grain of sand the same.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "Well, this is my stop, boys,"
+                    Bean stopped, standing thigh deep in the snow.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "I should probably go this way
+                    too," Finn said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            None of them wanted to say
+                    anything. The two pairs stood about five feet apart, both half buried in snow,
+                    both ready to be home, both ready to be warm, inside, by a roaring fire, listening
+                    to music or reading a book or doing whatever is best when the power goes out,
+                    and not a single one could think of a word to say to any other.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "I'll see you in homeroom,"
+                    Garrett put his hand out. He and Finn did their handshake. "Yeah man sounds
+                    good."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            Andrew and Bean did it too.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "Peace, Finn."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "Bye, Andrew."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "See you, Bean."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            "Be easy, Garrett."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>They made their
+                    way home. There were other people dragging themselves along the road, all
+                    headed to the same place. The snow was a third of the way up the streetlights
+                    now. Doorways weren't important anymore. Cars were left abandoned all down the
+                    road, almost completely covered. Tree limbs fought back against the weight of
+                    the ice. Everything was wilting and falling and cracking, but it was silent.
+                    The stillness of the snow falling down around them had the silence of an early
+                    morning, before even the birds begin to sing.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"Remember the
+                    first time we went sledding on the golf course? And we built that ramp into the
+                    sand trap?" Garret said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>"And Bean didn't
+                    weigh enough to make it all the way over?" They laughed. "Shit, we should have
+                    gone sledding today."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>Garrett put his
+                    arm around Andrew, halfway a chokehold, halfway a hug. "Yeah there's probably a
+                    lot we should have done today."</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing align=center style='text-align:center'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>*****</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span
+                    style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            Cheryl and Frasier sat waiting
+                    in the living room with the fireplace burning. The boys came in the door and
+                    stretched the cold out of their arms; they shook the snow out of their hair and
+                    shed the winter out of their coats. After two minutes of silence, "It's
+                    alright. We know," Garrett said.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            They all exhaled and hugged
+                    and awkwardly smiled.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            Their parents had hot
+                    chocolate waiting for them. They heated it up on the burner and added too many
+                    marshmallows. They drank it in the living room around the fire and talked about
+                    the snowmen and Bean and Finn and the snowball fight and the weather and last
+                    Christmas and last summer and all the Christmases and summers.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            The four of them made
+                    breakfast for dinner. They ate around every candle they could find in the house
+                    as the gray sky darkened in the nearly covered windows. They washed their
+                    dishes afterwards and put them where they had always gone.</span></p>
+                    
+                    <p class=MsoNoSpacing style='text-align:justify'><span style='font-size:12.0pt;
+                    font-family:"helvetica",serif'>            The night was spent around the
+                    fire. Garrett finished a book. Andrew finished a drawing. Cheryl and Frasier
+                    sat together under a blanket and watched their sons. They let the night drift
+                    forward through the falling snow just as Bean and his family did, and Finn and
+                    his, and Anne and Marty, and everyone from work. All of their family and
+                    friends spent their evening in the dwindling warmth of the places they loved
+                    most while a billion faceless snowmen stood tall and silent, illuminated by the
+                    last slivers of light from their living room windows.</span></p>
+                    
+                    <p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+                    
+                    <p class=MsoNoSpacing><span style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                    
+                    </div>
+                
+                
+            </div>
+            
+            <div class="modal-footer">
+              <button class="btn btn-success">
+                Comment
+              </button>
+              <button class="btn btn-default lefty" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="modal fade" id="worldEnd">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">
+                <span class="glyphicon glyphicon-off"></span>
+              </button>
+              <h4 class="modal-title">
+                
+                  <p class=MsoNoSpacing style='text-align:justify'><span
+                  style='font-size:12.0pt;font-family:"helvetica",serif'>&nbsp;</span></p>
+                  
+                  World without End
+              
+              </h4>
+            </div>
+            
+            <div class="modal-body">
+                
+                <p>
+                    The morning of the third day of 1993 blew away the cloud of winter in a long dry huff. One hour, grass was frozen together in links of dewdrops; houses
+                    were bunched up like bundles of kindling. And then, with no more hesitation than a sunrise, the sound of falling water spread through the neighborhood.
+                </p>
+                <p>
+                    It was like someone had opened an oven door. The warmth was welcome after two months of ice and kerosene heaters. In that first day, some children went all
+                    but naked, shedding winter clothing for their summer skins. They dragged their lightest clothing from closets and basements. They let fly the windows, ran
+                    through the fields, plunged their feet into grass; they breathed like free men.
+                </p>
+                <p>
+                    They had to go to church. The past six weeks of 80 degree weather for a winter in Ohio meant there was more than a warm front descending on the town. They
+                    dressed in their Sunday clothes Sunday through Friday, through school and evening mass. The pews filled up with well-pleated parents and unconcerned
+                    children.
+                </p>
+                <p>
+                    "&#8230; to the Father, and to the son&#8230;"
+                </p>
+                <p>
+                    The brothers sat three abreast: one tall, one average, one short. Their mother and father sat together on their left, listening with eyes and ears. The
+                    three had their eyes forward, heads up, hands in their laps, feet on the ground, and minds somewhere in the clouds above the town.
+                </p>
+                <p>
+                    "&#8230; As it was in the beginning, is now&#8230;"
+                </p>
+                <p>
+                    They fidgeted fresh wrinkles into their pants every time they shifted. The sermon was almost at its 120<sup>th</sup> minute. They tapped out the last few
+                    seconds on their thighs in tempo with the pastor.
+                </p>
+                <p>
+                    "&#8230; and ever shall be, world without end."
+                </p>
+                <p>
+                    The congregation joined in on the final 'amen'. The organ bellowed a last song out into the chamber as the crowd flowed out of the aisles and into the late
+                    afternoon. The three were already down the steps of the church and under the winter sun, leaving their parents for their own walk home.
+                </p>
+                <p>
+                    "Here's the plan," Danny walked backwards to gather up the eyes of the brothers. "We head to Johnny's house and pick him up, hopefully, if we can avoid his
+                    parents. Then we'll hit up Miro at the Croatian Station for a couple cases&#8230;" Then they hurried back to their house and tossed their Sunday clothes
+                    onto the top of the heap, dirty or not. Then Billy grabbed the food, Bobby and Johnny got the sleeping bags, and Danny being the oldest waited on the curb.
+                    They were out of the house and back on the road before their parents had even rounded onto their street. They grabbed the beer hidden in a bush, circled
+                    back down Brewer Lane parallel to their own, stopped by Mary's on the way ("Definitely. We'll be there," she told them) and hustled the few more blocks to
+                    the edge of Beaver Ridge forest. At the point they crossed the threshold of trees on the edge of Shelby, Pastor Dave was probably finally done ushering old
+                    Brenda and Perry Wilson out of earshot and out of the church until Sunday.
+                </p>
+                <p>
+                    The path was well worn and poorly kept. Oak trees stretched out over the trail in an endless pattern of woven branches. They walked for a little more than
+                    a mile until they reached a long sycamore limb wedged high above between two trees on their left. The five of them walked under the arch and onto what did
+                    not appear to be a trail. But here and there the leaves were stamped down and twigs were broken. Weeds didn't grow as thick along the line they followed.
+                </p>
+                <p>
+                    The year before, when the hottest part of the year fell on green canopies, the brothers built a treehouse: Danny, Billy, and Bobby. The earlier part of the
+                    summer was spent planning it and the last twenty days actually building it. As if the hand of God had reached down and curled their fingers around a
+                    hammer, they finished with a single night left before the school year started.
+                </p>
+                <p>
+                    The four stood under the tree, sweating from the journey, looking up at the weathered planks of the hideout.
+                </p>
+                <p>
+                    "Alrighty. Let's do it. Here's to heat!" Johnny ripped open a case and let fly a beer in Danny's direction. Johnny and Danny had been white-on-rice since
+                    they met on the bus the first day of middle school. Danny grabbed it from the air and cracked the top, raising his fist to the sun, proudly letting the
+                    foam spill to the ground. Johnny tossed out two more and grabbed one for himself.
+                </p>
+                <p>
+                    The three cracked the seals and raised them to the sky.
+                </p>
+                <p>
+                    <em>Well, here's to heat!</em>
+                </p>
+                <p>
+                    <em>Not that ignites and burns down shanties,</em>
+                </p>
+                <p>
+                    <em>But that excites and brings down panties!</em>
+                </p>
+                <p>
+                    <em>Here's to beer,</em>
+                </p>
+                <p>
+                    <em>And here's to heat!</em>
+                </p>
+                <p>
+                    They turned the golden liquid to their lips and raced to finish. Danny first, then Johnny, Billy, and finally Bobby sipped the last drop from his can. They
+                    laughed as he struggled to the end and all slapped the youngest on his back. The night had started and it wasn't even dusk.
+                </p>
+                <p>
+                    The craftsmanship was nothing remarkable, but it was sturdy enough. There was a window on each side, it didn't leak, and they were able to cram in about 8
+                    people. It was everything it needed to be.
+                </p>
+                <p>
+                    Bobby sat against the tree trunk running up the middle of the treehouse reading a book in the light of a lantern. The occasional bug cast a shadow along
+                    the pages. Billy sat across from him against the wall. He drew Bobby; starting with the book and filling in the body behind it. Danny and Johnny were
+                    holding an intense conversation on the ethics of peanut buttering a friend's car and the other two joined in as they thought of something interesting to
+                    add.
+                </p>
+                <p>
+                    "That's so far from okay. It strips the paint off," Billy chimed in.
+                </p>
+                <p>
+                    "Thank you!" Danny stood up to express his appreciation.
+                </p>
+                <p>
+                    "You have to leave it on there for week for it to do anything though," Johnny said. "Who would leave their car covered in peanut butter for a week?"
+                </p>
+                <p>
+                    "It messed up a kid in my class' car in like two days," Billy looked back to his drawing, done with backing up his brother.
+                </p>
+                <p>
+                    Nirvana played on a cassette in Johnny's stereo and they listened to it as much as they listened to the breeze coming through the cracks in the windows as
+                    much as they listened to each other. After two hours past sunset and a case of beer, their ramblings were interrupted by shouts from outside. Johnny opened
+                    up a window and stuck his head out.
+                </p>
+                <p>
+                    "Well hello there Mary, Annie, Lizzie!" He shined a flashlight down on them.
+                </p>
+                <p>
+                    "A good evening to you, Jonathan! Might you toss us down the ladder?" Mary curtsied.
+                </p>
+                <p>
+                    He put his hand to his chin, pondering the question. "How about you throw me your shirt, and I'll throw you the ladder?" He grinned.
+                </p>
+                <p>
+                    Mary saw a hand come through the window and slap Johnny on the head.
+                </p>
+                <p>
+                    "Hey! Jesus, I'm just messing around," he grumbled under his breath and ducked back inside. He was replaced by Danny. "Good evening, Mary. Bobby, please
+                    lower the ladder so these fine ladies can join us." A hole opened up in the bottom of the treehouse and a rope ladder fell to hang a foot above the ground.
+                    They all piled in the chest of the canopy and hugs ensued. Danny kissed Mary on the eye, Johnny picked up Annie in a bear hug, and Lizzie plopped down
+                    between Bobby and Billy, grabbing the sketch from him. Annie pulled a bottle of wine from her backpack and uncorked it, raising it to a wonderful night.
+                    Johnny handed beers around from the new case and the seven of them sang their cheer. Bobby and Lizzie still stumbled on the words, but the night had
+                    rounded out the edges. The words melted into laughter into memories into stories. The time Billy and Bobby had to sneak into the Wilsons' house. The time
+                    Annie and Johnny stuck Danny and Mary together. The first weekend the seven of them stayed in the treehouse.
+                </p>
+                <p>
+                    Saturday was their salvation. Saturday was the world. God could have Sunday, and School could have the week. But they took Friday night by the mane and
+                    charged it straight down onto the weekend.
+                </p>
+                <p>
+                    All but one lantern was turned off. Danny sat with his head under a window and his eyes closed into half crescents. Mary's head rested in his lap. Annie
+                    and Johnny sat across from them against the tree, his head on her shoulder. The other three slept away from the light; Bobby and Lizzie curled up close
+                    together.
+                </p>
+                <p>
+                    Johnny looked at the two youngest and smiled. "That's really sweet, you know?" he said out into the air. "You two together, and the younger brother and
+                    sister together."
+                </p>
+                <p>
+                    Danny grinned without opening his eyes. "They're going to be a cute couple if Bobby ever gets the balls to ask her out."
+                </p>
+                <p>
+                    Mary turned in his lap and hit him on the chest. "You're a dick."
+                </p>
+                <p>
+                    "No, I'm a joker. Plus if they're just pretending to sleep and they heard me, then it'll be all the easier for him." Danny finally opened an eye and looked
+                    over at the sleeping pair. "Someday, someday. They've got plenty of time."
+                </p>
+                <p>
+                    "What time is it, anyway?" Annie asked.
+                </p>
+                <p>
+                    "2:30," Johnny said.
+                </p>
+                <p>
+                    She sighed long and content and kissed him on the top of the head. "You should take me to bed sweet prince."
+                </p>
+                <p>
+                    Johnny stared into the lantern. "Guys, I think I figured it out," he said.
+                </p>
+                <p>
+                    "What?"
+                </p>
+                <p>
+                    "Why it's summer."
+                </p>
+                <p>
+                    They listened.
+                </p>
+                <p>
+                    "You know how that comet broke up over the Earth a couple years back?"
+                </p>
+                <p>
+                    They remembered.
+                </p>
+                <p>
+                    "Well why not that? They said it had probably been centuries since something like that had happened. Maybe it had something to do with the change in
+                    temperature."
+                </p>
+                <p>
+                    "That might be the dumbest thing I've ever heard," Annie laughed at him.
+                </p>
+                <p>
+                    "Well fuck you too!" He took his head off her shoulder.
+                </p>
+                <p>
+                    "Hey come on, maybe he's on to something," Mary tried to console him.
+                </p>
+                <p>
+                    "The only thing he'll ever be onto is me," Annie grinned and the three got into an argument about whether Johnny had ever had a good idea in his life.
+                </p>
+                <p>
+                    "I'm joining the army."
+                </p>
+                <p>
+                    They stopped.
+                </p>
+                <p>
+                    Danny had his eyes closed tight. Head just under the window. Mary no longer next to him. Hands gripping each other in his lap.
+                </p>
+                <p>
+                    They stopped.
+                </p>
+                <p>
+                    "What do you mean?" Mary asked.
+                </p>
+                <p>
+                    "I signed up for the army. And they recruited me."
+                </p>
+                <p>
+                    "Signed up?" She backed against the tree.
+                </p>
+                <p>
+                    "Wait are you serious, man?" Johnny stared into his eyes.
+                </p>
+                <p>
+                    "You're the only ones I've told. They accepted me two weeks ago. I haven't told Billy or Bobby yet, or my parents," he was whispering now.
+                </p>
+                <p>
+                    "You can't just join the army!" Mary yelled. Danny looked surprised. The sleeping three stirred and settled. "What about Ohio State? What about us? You
+                    can't just leave us." She started to cry. Johnny got up and held her.
+                </p>
+                <p>
+                    The breeze had stopped. They were quiet.
+                </p>
+                <p>
+                    "When do you leave?" Johnny asked over her shoulder.
+                </p>
+                <p>
+                    "The beginning of May. They said I can graduate early."
+                </p>
+                <p>
+                    Mary made a small sound.
+                </p>
+                <p>
+                    "When are you going to tell your family?" He asked.
+                </p>
+                <p>
+                    "I needed to tell you first."
+                </p>
+                <p>
+                    They stood there for a while.
+                </p>
+                <p>
+                    "I know why it's summer," Annie said, looking at the lantern.
+                </p>
+                <p>
+                    Danny kept his eyes closed.
+                </p>
+                <p>
+                    "It's for you. For before you leave."
+                </p>
+                <p>
+                    All the crickets in the world were silent when she said it.
+                </p>
+                <p>
+                    Danny pulled his knees into his chest.
+                </p>
+                <p>
+                    "It's for us. The four of us," Johnny said. "Why do you think you just up and decided to build this place last year?"
+                </p>
+                <p>
+                    "That's stupid."
+                </p>
+                <p>
+                    "It's better than my idea."
+                </p>
+                <p>
+                    The treehouse cradled them high above the ground. Above the leaves of the winter and the growth of the summer. It was halfway between the Earth and the
+                    clouds, the roots and the leaves. They stayed there for a very long time.
+                </p>
+                <p>
+                    Danny stood up for Mary. She clutched him tight, burying her face in his shoulder.
+                </p>
+                <p>
+                    "I'll be back in November, and you'll be back for winter break," he said.
+                </p>
+                <p>
+                    She took a bit to respond. "I know."
+                </p>
+                <p>
+                    They held each other up.
+                </p>
+                <p>
+                    "You're really doing this, aren't you?" the words were muffled in his shirt.
+                </p>
+                <p>
+                    "Yeah. I've thought about it a lot. I've made up my mind."
+                </p>
+                <p>
+                    "I know," she said.
+                </p>
+                <p>
+                    The next morning smelled like the night before. They all roused as the sun peeked through the cracks in the windows and onto their eyelids. Not much was
+                    said as the seven nursed their headaches. They rolled up sleeping bags and collected the bits of trash. Bobby stayed close to Lizzie. The rest stayed close
+                    to Danny.
+                </p>
+                <p>
+                    "I'm gonna miss this," Annie was the one to finally say it.
+                </p>
+                <p>
+                    They all agreed, saying they'd had some great times in the short while they had the treehouse, that the younger three would have to keep it up. They filed
+                    down. Billy then Bobby, Lizzie behind him. Annie then Mary.
+                </p>
+                <p>
+                    Johnny started down the ladder. "You know, you're going to be in basic training for the hottest part of the year. This is like paradise compared to
+                    Georgia," he said.
+                </p>
+                <p>
+                    "Honestly, I think there's a very good chance it'll be Christmas in July."
+                </p>
+                <p>
+                    Johnny laughed and nodded. "Well here's to heat," he grinned and ducked below the floor.
+                </p>
+                <p>
+                    Danny put a foot on the ladder. The treehouse cradled him high above the ground. Above the leaves, new and old. Whenever the Earth shook. Whenever the
+                    seasons melted together. He looked out the window, halfway across the world. He stepped down into the chill of the morning.
+                </p>
+                
+            </div>
+            
+            <div class="modal-footer">
+              <button class="btn btn-success">
+                Comment
+              </button>
+              <button class="btn btn-default lefty" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div> 
+    
+    
+    
+    
+    
+    <div class="modal fade" id="hooky">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">
+                <span class="glyphicon glyphicon-off"></span>
+              </button>
+              <h4 class="modal-title">
+                
+                  Hooky
+              
+              </h4>
+            </div>
+            
+            <div class="modal-body">
+                
+                <p>
+                    We decided to skip school.
+                </p>
+                <p>
+                    The bus was too crowded and the day was too nice.
+                </p>
+                <p>
+                    We walked in the direction of the bus stop because our momma stood on the porch as we left, but we jumped behind the big patch of hydrangeas once we
+                    rounded the corner.
+                </p>
+                <p>
+                    We watched our classmates through the bush.
+                </p>
+                <p>
+                    Only after the huge billow of diesel exhaust had settled did we dare to move.
+                </p>
+                <p>
+                    We walked, for the sunniest and right near most perfect two hours that any two kids have ever walked, to the lake on the edge of town.
+                </p>
+                <p>
+                    We brought along four cans of pop, a couple of sandwiches, our fishing poles and tackle (we went back and waited behind the shed until we knew momma had
+                    left for the store), and all the necessities for a day at the lake, playing cards and Archie comic books, anything and everything that makes fishing the
+                    best day out from behind a desk.
+                </p>
+                <p>
+                    It wasn't until the sun had passed on over the cap of the sky, once the morning birds settled down for the afternoon, when the shadows had started to
+                    mingle with our feet again, that we got a bite.
+                </p>
+                <p>
+                    We pulled on the rod; the fish broke the surface; drops of water hung in the air.
+                </p>
+                <p>
+                    It could've been the prettiest fish in the world; it could've been every color of the sky; it could've been the most beautiful mount in our living room;
+                    but it was a lake-bed-brown five foot northern pike with a crick in its jaw; the most spectacular fish either of us had ever seen.
+                </p>
+                <p>
+                    We imagined telling our dad the whole story, how it almost pulled us into the water, how we dragged it up onto the bank, how we knew there was no way the line would hold; but we imagined him telling us to go out back to the shed for skipping school.
+                </p>
+                <p>
+                    We took the hook out of its mouth; the fish slowed its squirming when it felt the cool lake rise up around its belly; giving one last look at the ripples it made in the water, we opened our palms, and watched it rush back off into the depths of the lake, never to be caught again.
+                </p>
+                
+            </div>
+            
+            <div class="modal-footer">
+              <button class="btn btn-success">
+                Comment
+              </button>
+              <button class="btn btn-default lefty" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+    <div class="modal fade" id="gouyen">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">
+                <span class="glyphicon glyphicon-off"></span>
+              </button>
+              <h4 class="modal-title">
+                
+                  Gouyen, NM
+              
+              </h4>
+            </div>
+            
+            <div class="modal-body">
+                
+                <p>
+                    Without a reason at all I felt comforted by the shop's dirt-brown walls, like it had been dry roasted and left to jerky out in the sun. "Bryce's Body
+                    Shop", the sign looked down on the road with chunky red and yellow vibrant letters that seemed to be the only thing with color on the dusty strip of
+                    highway other than Miss Ida across the street in her wonderfully green sundress and comically yellow sun hat. She ran "Ida's," the only store around for 45
+                    minutes, give or take a few road signs, it together with Bryce's garage made the township (or maybe friendship, population of two and as I found out, no
+                    official recognition from the county seat) of Gouyen, New Mexico: a smidge off of I-40 right in between Amarillo, TX and Tucumcari, NM with a good 60 miles
+                    on either side. On the edge of one of those 60 miles I caught a shiver in my engine and lurched halfway over the endless dashed yellows of the Midwest
+                    highways, steam tooting out of my hood like it was filled with coal. With half a cell signal I found my way to a cheery "hullo, sounds good, on-ma-way" and
+                    Bryce the wizened mechanic rolled up in a classic rusty red slapped together tow truck.
+                </p>
+                <p>
+                    He walked over to me from the garage and shoved a hunk of metal in my face "you got yourself a faulty head gasket." I felt pretty sure that he had taken
+                    out more of my engine than he needed but the lack of oil on my face and years crusted in my hands left me nodding, thanking, and exhausted at the 6 hours I
+                    had to kill on the border of Texas and New Mexico, not the most exciting of state lines, with no cell service and a car every three hours to stop and chat
+                    with Miss Ida, pick up some goods, and wander away again in a rustle of dust. "And your coolant is blacker than your tires. And speaking of, those would be
+                    well off with a rotation, too." Bryce showed me to an old but leather recliner in his living room with a table-full of magazines and 11 channels of TV. He
+                    told me to help myself to a glass of water and said if I was a sweet-talker I could probably get a treat from Miss Ida on the store. Car and Driver, Sports
+                    Illustrated, somewhat-local news, two glasses of water, a trip to the bathroom and out onto the porch. It was hot, but not dust-hot, closer to warm, not
+                    enough to make me sweat. I sat on a rocking chair facing the garage and watched Bryce bent over the motor, rag sticking out of the back pocket of his
+                    jumpsuit. Across the road Miss Ida swayed in a porch swing to the side of her store, green dress catching the air at her knees. Bryce stole glances at her
+                    and she pretended to not see, kicking her eyes up to the sky and back down to his behind whenever he bent back over the engine.
+                </p>
+                <p>
+                    I took Bryce up on his suggestion and went over to Ida's. "Wonderful to meet you, Mr. Carlton." She had the voice of an old Georgia and manners that
+                    matched her age, politely near demanding I take a seat on the swing with her and off she passed into the doors of her store, back out a moment later with
+                    what could've been her favorite silver platter of two glasses, two cake forks, two saucers, a lemon bar on each, and a pitcher of lemonade. I felt we were
+                    both pretty good at watching Old Bryce, but she had a real knack for it. "Would you do me a favor Mr. Carlton?" I agreed, smiled to be of service, and
+                    accepted the letter she gave me for Bryce. "Walk that right on over there and tell him it's no rush at all, not to worry a moment."
+                </p>
+                <p>
+                    "Well isn't that the sweetest. She asked me over for dinner tonight." Bryce looked up and waved at her and she waved back, smile on her face. Bryce went
+                    back to work whistling a tune that sounded a bit outdated, myself left with no idea what I had just been a part of and for what reason, but I knew and
+                    loved that all had ended well so I asked Bryce if he and Miss Ida were dating. He took to telling me three or four times that was the funniest idea he had
+                    heard in all his 45 years of being a mechanic in Gouyen and when I asked Miss Ida, she found the idea even funnier than Bryce and couldn't think in all 40
+                    years of selling groceries had a customer said anything "so outlandish. But what a wonderful idea." We talked a while longer on the porch swing about my
+                    trip west and how she ended up in New Mexico and how hardheaded Old Bryce can be but that he's cuter than the underside of a buttercup when he gets
+                    flustered. And then we sat in comfortable silence, she reading a book, me watching the clouds.
+                </p>
+                <p>
+                    The day dimmed down lower to the overtones of a dusty evening, sun falling perfectly towards the horizon just above the interstate falling off into the
+                    distance. At the edge of the sun being bright and the sun being beautiful, Bryce called me over across the road and told me the damage, not too bad all
+                    considered, and my car was a joy to work with, a nice hunk of metal and that as much as he'd like to see me back, knew it would be humming all the way to
+                    the coast. A firm handshake and a holler to Miss Ida, I was on the road enjoying the sound of a healthy engine and watching Gouyen, New Mexico fade away in
+                    my rearview mirror, Old Bryce crossing the interstate wiping his hands on the rag in his back pocket and slicking his hair back, Miss Ida standing holding
+                    her book across her chest, waiting for him.
+                </p>
+                
+            </div>
+            
+            <div class="modal-footer">
+              <button class="btn btn-success">
+                Comment
+              </button>
+              <button class="btn btn-default lefty" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+    
+<!-- SCRIPTS -->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <!-- Smooth Scrolling -->
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <!-- Page Script -->
+    <script>
+        
+    /*    function logoIn() {
+            $("#prof").css('display', 'inline');
+            $(".logo").hide().fadeIn({queue: false, duration: 2000});
+            $(".logo").animate({
+                marginTop:"-10px"
+                },1300);
+        };
+    */    
+        $("body").hide().fadeIn(600);
+        
+        $("#arrow").animate({
+              marginTop:"40px"
+          }, 800);
+
+    /*
+        setTimeout(
+            function(){
+                $(document).ready(logoIn);
+                $(document).ready(function(){
+                    $("#arrow").css('display','inline');
+                });
+            }, 700);
+    */   
+
+        var windowHeight = $(window).height();
+        $(".contentContainer").css("min-height",windowHeight);
+        
+    </script>
+  </body>
+      <!--  
+      <div onmouseover="
+                      
+                          jquery:
+                          $('.logoCon').hide();
+                          $('#about').show();
+                      
+                      " onmouseout="
+                      
+                          jquery:
+                          $('.logoCon').show();
+                          $('#about').hide();
+                      
+                      ">
+                          <div class="logoCon">
+                            <div class="logo">
+                                <img id="prof" src="img/code.png"/>
+                            </div>
+                            <h1 class="logo">WRITINGS</h1>
+                          </div>
+                          <div id="about">
+                              INFORMATION
+                          </div>
+                          
+                      </div>
+      -->
+</html>
