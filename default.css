@@ -1,9 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500|Alegreya+Sans+SC:400,500|Graduate|Catamaran|Philosopher|Molengo|Galdeano);
+
 body    {
-        background-color: #DDDDDD;
+        background: -moz-linear-gradient(#CCE6FF, #FAFAFA);
+        background: -webkit-linear-gradient(#CCE6FF, #FAFAFA);
+        background-color: #CCCCCC;
 }
 
 #toplevel   {
-        width: 1000px;
+        background: -moz-linear-gradient(#CCE6FF, #DDDDDD);
+        background: -webkit-linear-gradient(#CCE6FF, #DDDDDD);
+        background-color: #FF3333;
+        width: 1100px;
         height: 1000px;
-        border: groove black 5px;
+        border-radius: 15px;
+        margin: 0 auto;
+        /*background-color: rgba(190,190,190,.4);*/
+        color: #222222;
 }
+
+.full   {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+}
+
+#profile    {
+        padding-top: 50px;
+}
+
+#profPicDiv {
+        display: inline-block;
+        float: left;
+        margin: 0 auto;
+        text-align: center;
+}
+
+#profPic    {
+        width: 300px;
+}
+
+h1      {
+        color: #565656;
+        font-size: 1.5em;
+        font-family: Graduate;
+        font-weight: 100;
+}
+
+#navbar {
+        border-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        height: 50px;
+        text-align: left;
+}
+
+#logo  {
+        float: left;
+        margin-top: 20px;
+        margin-left: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-right: solid #666666 1px;
+        text-align: center;
+}
+
+#navbar ul  {
+        margin-left: 50px;
+        float: left;
+}
+
+#navbar li  {
+        display: inline-block;
+        font-family: Catamaran;
+        font-weight: 300;
+        font-size: 1.3em;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 25px;
+}
+
+
+
+
+
+
+
+
+
+
