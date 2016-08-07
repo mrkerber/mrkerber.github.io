@@ -1,0 +1,39 @@
+body{
+    padding: 0;
+    background-color: lightgrey;
+}
+.cell{
+    margin: 0px;
+    border-bottom: dotted 1px grey;
+    border-right: dotted 1px grey;
+    float: left;
+    background-color: #003355;
+}
+.clear{
+    clear: both;
+}
+.alive{
+    background-color: #0099AA;
+}
+.dead{
+    background-color: #115522;
+}
+.lived{
+    background-color: #555555;
+}
+#controls{
+    float: left;
+    margin-bottom: 10px;
+}
+#cellClicked{
+    float: right;
+    color: white;
+}
+#display{
+    float: right;
+    margin-right: 50px;
+    width: 600px;
+}
+#game{
+    float: right;
+}
