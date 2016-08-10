@@ -4,79 +4,96 @@
         <meta charset="utf-8">
             
         <title>Matthew Kerber</title>
-        <link rel="icon" href="img/BeachPic.png" />
+        <link rel="icon" href="img/logoNavy.png" />
         <link rel="stylesheet" href="default.css">
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="jquery-3.1.0.min.js" type="text/javascript"></script>
+        <script src="js/homepage.js" type="text/javascript"></script>
         
         <style></style>
     
     </head>
     <body>
-        <div class="container" id="toplevel">
-            <div class="container full" id="navbar">
+        <div class="full" id="top">
+            <div id="navbar">
                 <div id="logo">
                     <h1>Matthew Kerber</h1>
                 </div>
                 <ul>
-                    <li>Projects</li>
-                    <li>Writings</li>
-                    <li>Music</li>
-                    <li>Resume</li>
+                    <li><span id="projectTab" class="selected">Projects</span></li>
+                    <li><span id="writingTab" class="">Writings</span></li>
+                    <li><span id="mediaTab" class="">Media</span></li>
+                    <li><span id="aboutTab" class="">About</span></li>
                 </ul>
-                <!--
-                <div id="navButtons">
-                    <form action="http://www.linkedin.com/in/matthew-kerber">
-                        <input type="submit" value="LinkedIn">
-                    </form>
-                    <form action="http://www.linkedin.com/in/matthew-kerber">
-                        <input type="submit" value="LinkedIn">
-                    </form>
-                </div>
-                -->
             </div>
-            
-            <div class="breaker"></div>
-            <div id="profileLine"></div>
-            
-            <div class="container" id="profile">
-                Prof. Mayer-Patel received his Ph.D from the University of
-      California, Berkeley in 1999. He subsequently joined the faculty at the
-      University of North Carolina where he is currently an Associate
-      Professor.Prof. Mayer-Patel received his Ph.D from the University of
-      California, Berkeley in 1999. He subsequently joined the faculty at the
-      University of North Carolina where he is currently an Associate
-      Professor.Prof. Mayer-Patel received his Ph.D from the University of
-      California, Berkeley in 1999. He subsequently joined the faculty at the
-      University of North Carolina where he is currently an Associate
-      Professor.
-            </div>
-            
-            <div class="breaker"></div>
-            
-            <div class="full" id="info">
-                <div class="infoBox" id="infoGOL">
-                    <a href="gol/a2.html"><img class="infoIcon" src="img/golIcon.png" /></a>
+        </div>
+        <div id="projects">
+            <div class="container bodyOne">
+                <div class="container profile">
+                    <img class="logoImg" src="img/logoOrange.png" />
+                    <p>My website is currently under renovation. Sorry for the inconvenience!</p>
+                    <!--
+                    <ul>
+                        <li>Developer.</li>
+                        <li>Writer.</li>
+                        <li>Creator.</li>
+                    </ul>
+                    -->
                 </div>
-                <div class="infoBox">
-                    <a href="http://www.eventhorizonmag.com"><img class="infoIcon" src="img/ehIcon.png" /></a>
-                </div>
-                <div class="infoBox">
-                    <a href=""><img class="infoIcon" src="img/chatterIcon.png" /></a>
-                </div>
-                
-                <div class="breaker spacer"></div>
-                
-                <div class="infoBox"></div>
-                <div class="infoBox"></div>
-                <div class="infoBox"></div>
             </div>
+            <div class="bodyTwo">
+                <div class="full info">
+                    <div class="infoBox" id="infoGOL">
+                        <a href="gol/a2.html"><img class="infoIcon" src="img/golIcon.png" /></a>
+                    </div>
+                    <div class="infoBox" id="infoEH">
+                        <a href="http://www.eventhorizonmag.com"><img class="infoIcon" src="img/ehIcon.png" /></a>
+                    </div>
+                    <div class="infoBox" id="infoChatter">
+                        <a href="https://github.com/mrkerber/Chatter"><img class="infoIcon" src="img/chatterIcon.png" /></a>
+                    </div>
+                    
+                    <div class="breaker spacer"></div>
+                </div>
+            </div>
+        </div>
+        <div id="writings">
+            <div class="container bodyOne">
+                <div class="container profile">
+                    <img class="logoImg" src="img/logoOrange.png" />
+                    <!--
+                    <ul>
+                        <li>Developer.</li>
+                        <li>Writer.</li>
+                        <li>Creator.</li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <div class="bodyTwo">
+                <div class="full info">
+                    <div class="infoBox">
+                        <a href="https://cdr.lib.unc.edu/record/uuid:480af330-67b1-4461-b161-acc9eafe2b49"><img class="infoIcon" src="img/roofIcon.png" /></a>
+                    </div>
+                    <div class="infoBox">
+                        <a href="https://cellardoorunc.wordpress.com/2016/05/11/rosie-septic/"><img class="infoIcon" src="img/rosieIcon.png" /></a>
+                    </div>
+                    <div class="infoBox">
+                        <a href="http://www.eventhorizonmag.com"><img class="infoIcon" src="img/purpIcon.png" /></a>
+                    </div>
+                    
+                    <div class="breaker spacer"></div>
+                    
+                    <div class="infoBox"></div>
+                    <div class="infoBox"></div>
+                    <div class="infoBox"></div>
+                </div>
+        </div>
+        <div id="media">
             
-            <!--
-            <div id="profPicDiv">
-                <img id="profPic" src="img/BeachPic.png" />
-            </div>
-            -->
+        </div>
+        <div id="about">
+            
         </div>
     </body>
 </html>
