@@ -22,6 +22,21 @@ function setClickEvents(){
 		var id = $(this).attr('id')
 		openAbout(id);
     });
+	$(".infoBox").hover(function(e){
+		$(this).find(".infoBoxCover").fadeIn(150);
+		}, function(e){
+		$(this).find(".infoBoxCover").fadeOut(75);
+	});
+	/*
+	on({
+    mouseenter: function () {
+        //stuff to do on mouse enter
+    },
+    mouseleave: function () {
+        //stuff to do on mouse leave
+    }
+});*/
+	
 }
 
 function openProjects(id){
@@ -59,6 +74,8 @@ function tabChange(id) {
 	$('#about').css("display", "none");
 	$('#' + id).css("display", "");
 }
+
+
 
 /*    $(".cell").on("click", function(e){
         e.preventDefault();
