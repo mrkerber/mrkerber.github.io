@@ -9,7 +9,7 @@ function cell(location){
 var cols = 20;
 var rows = 20;
 var radius = 1;
-var delay = 0;
+var delay = 100;
 var lonely = 2;
 var overPop = 4;
 var genMin = 3;
@@ -130,23 +130,23 @@ function setClickEvents(){
         if (e.shiftKey) {
             cells[cellID].alive = true;
             cells[cellID].lived = true;
-            $('#c' + cellID).css("background-color", "#12B825");
+            $('#c' + cellID).css("background-color", "#FFC77A");
         } else if (e.ctrlKey) {
             if (cells[cellID].lived)
-                $('#c' + cellID).css("background-color", "#00556B");
+                $('#c' + cellID).css("background-color", "#D1E1FF");
             else
                 $('#c' + cellID).css("background-color", "#003355");
             cells[cellID].alive = false;
         } else {
             cellClick($(this).attr('id'));
         }
-        
+
     });
 }
 
 function build(){
     var count = 0;
-    
+
     for(var x = 0; x < rows; x++){
         for(var y = 0; y < cols; y++){
             if (!borders)
@@ -190,20 +190,20 @@ function cellClick(id){
     if (cells[cellID].alive == false){
         cells[cellID].alive = true;
         cells[cellID].lived = true;
-        $('#c' + cellID).css("background-color", "#12B825");
+        $('#c' + cellID).css("background-color", "#FFC77A");
     }
     else {
         cells[cellID].alive = false;
-        $('#c' + cellID).css("background-color", "#00556B");
+        $('#c' + cellID).css("background-color", "#D1E1FF");
     }
 }
 
 // Sets cell color according to status of life
 function lifeProtocol(cellID){
     if (cells[cellID].alive)
-        $('#c' + cellID).css("background-color", "#12B825");
+        $('#c' + cellID).css("background-color", "#FFC77A");
     else
-        $('#c' + cellID).css("background-color", "#00556B");
+        $('#c' + cellID).css("background-color", "#D1E1FF");
 }
 
 function stepClick() {
@@ -215,7 +215,7 @@ function stepClick() {
 function age() {
     var aliveCount = 0;
     for (var count = 0; count < cols*rows; count++) {
-            
+
             //Above cell
             for(var h = radius; h > 0; h--){
                 var currentRow = ((count - (count%cols)) / rows) - h;
@@ -239,7 +239,7 @@ function age() {
                     }
                 }
             }
-            
+
             //Same row as cell
             var currentRow = ((count - (count%cols)) / rows);
             var minCell = currentRow * cols;
@@ -261,7 +261,7 @@ function age() {
                     }
                 }
             }
-            
+
             //Below cell
             for(var h = radius; h > 0; h--){
                 var currentRow = ((count - (count%cols)) / rows) + h;
@@ -285,13 +285,13 @@ function age() {
                     }
                 }
             }
-            
+
             cells[count].aliveNeighbors = aliveCount;
             aliveCount = 0;
     }
 
 
-    
+
     //Update Grid
     for(count = 0; count < cols*rows; count++){
         aliveCount = cells[count].aliveNeighbors;
@@ -306,12 +306,3 @@ function age() {
         }
     }
 }
-
-
-
-
-
-
-
-
-

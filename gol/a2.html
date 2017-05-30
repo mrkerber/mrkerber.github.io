@@ -11,43 +11,67 @@
 </head>
 
 <body>
-    <div id="controls">
-        <input id="start" type="button" value="Start" onclick="startClick();" />
-        <input id="stop" type="button" value="Stop" onclick="stop();" />
-        <input id="step" type="button" value="Step" onclick="stepClick();" />
-        <br>
-        <input id="reset" type="button" value="Reset" onclick="refresh();" />
-        <input id="randomize" type="button" value="Randomize" onclick="randomize();" />
-        <br>
-        OUTSIDE NEIGHBORS: <br>
-        <input id="dead" type="button" value="Always Dead" onclick="alwaysDead();" />
-        <input id="alive" type="button" value="Always Alive" onclick="alwaysAlive();" />
-        <input id="toroidal" type="button" value="Toroidal" onclick="alwaysToroidal();" />
-        <br>
-        <!-- Need to update these values in here -->
-        SIZE: <span id="size">20x20</span> <br>
-        <input type="range" name="size" min="20" max="200" value="0" onchange="setDimension(this.value);"/> <br>
-        DELAY: <span id="delay">50</span> ms <br>
-        <input type="range" name="delay" min="0" max="1000" value="50" onchange="setDelay(this.value);"/> <br>
-        <br>
-        PARAMETERS:<br>
-        RADIUS: <span id="radius">1</span> <br>
-        <input type="range" name="radius" min="1" max="10" value="1" onchange="setRadius(this.value);"/> <br>
-        LONLINESS: <span id="lonely">2</span> <br>
-        <input type="range" name="lonely" min="0" max="10" value="2" onchange="setLonliness(this.value);"/> <br>
-        OVERPOPULATION: <span id="overpop">4</span> <br>
-        <input type="range" name="overpop" min="0" max="10" value="4" onchange="setOverpopulation(this.value);"/> <br>
-        GENERATION MIN: <span id="genmin">3</span> <br>
-        <input type="range" name="genmin" min="0" max="10" value="3" onchange="setGenMin(this.value);"/> <br>
-        GENERATION MAX: <span id="genmax">3</span> <br>
-        <input type="range" name="genmax" min="0" max="10" value="3" onchange="setGenMax(this.value);"/> <br>
-        
-    </div>
-    <div id="game">
-        <div id="display">
-    
-        </div>
-    </div>
+    <div id="top-container">
 
+      <div id="controls-container">
+        <div id="controls">
+
+          <h1 id="title">Conway's Game of Life</h1>
+
+            <input id="start" class= "button" type="button" value="Start" onclick="startClick();" />
+            <input id="stop" class="button" type="button" value="Stop" onclick="stop();" />
+            <input id="step" class="button" type="button" value="Step" onclick="stepClick();" />
+
+            <div class="spacer"></div>
+
+            <input id="reset" class="button" type="button" value="Reset" onclick="refresh();" />
+            <input id="randomize" class="button" type="button" value="Randomize" onclick="randomize();" />
+
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+
+            OUTSIDE CELLS:
+            <input id="dead" class="button" type="button" value="Dead" onclick="alwaysDead();" />
+            <input id="alive" class="button" type="button" value="Alive" onclick="alwaysAlive();" />
+            <br>
+
+            <div class="spacer"></div>
+
+            SIZE: <span id="size">20x20</span>
+            <input class="slider" type="range" name="size" min="20" max="100" value="0" onchange="setDimension(this.value);"/> <br>
+
+            <div class="spacer"></div>
+
+            DELAY: <span id="delay">100</span> ms
+            <input class="slider" type="range" name="delay" min="100" max="1000" value="100" onchange="setDelay(this.value);"/> <br>
+
+            <div class="spacer"></div>
+
+            LONELINESS: <span id="lonely">2</span>
+            <input class="slider" type="range" name="lonely" min="0" max="10" value="2" onchange="setLonliness(this.value);"/> <br />
+
+            <div class="spacer"></div>
+
+            OVERPOPULATION: <span id="overpop">4</span>
+            <input class="slider" type="range" name="overpop" min="0" max="10" value="4" onchange="setOverpopulation(this.value);"/> <br>
+
+            <div class="spacer"></div>
+
+            GENERATION MIN: <span id="genmin">3</span>
+            <input class="slider" type="range" name="genmin" min="0" max="10" value="3" onchange="setGenMin(this.value);"/> <br>
+
+            <div class="spacer"></div>
+
+            GENERATION MAX: <span id="genmax">3</span>
+            <input class="slider" type="range" name="genmax" min="0" max="10" value="3" onchange="setGenMax(this.value);"/> <br>
+        </div>
+      </div>
+      <div id="display-container">
+          <div id="display">
+
+          </div>
+      </div>
+
+    </div>
 </body>
 </html>

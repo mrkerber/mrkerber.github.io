@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
 body{
     padding: 0;
-    background-color: lightgrey;
+    background-color: #BCBCFF;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
 }
 .cell{
     margin: 0px;
     border-bottom: dotted 1px grey;
     border-right: dotted 1px grey;
     float: left;
-    background-color: #003355;
+    background-color: #A1B7E0;
 }
 .clear{
     clear: both;
@@ -19,7 +23,7 @@ body{
     background-color: #115522;
 }
 .lived{
-    background-color: #555555;
+    background-color: #D1E1FF;
 }
 #controls{
     float: left;
@@ -34,6 +38,71 @@ body{
     margin-right: 50px;
     width: 600px;
 }
-#game{
-    float: right;
+#display-container{
+    margin: 0 auto;
+}
+#controls-container{
+    padding: 20px 0 0 50px;
+    width: 50%;
+}
+#top-container{
+    width:1200px;
+    height: 1000px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.button{
+    background-color: #FFEFC4;
+    border: 1px grey solid;
+    border-radius: 8%;
+    padding: 7px 7px 7px 7px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+}
+#start{
+    background-color: #CCFFA8;
+    margin: 0 10px 0 10px;
+    padding: 15px 30px 15px 30px;
+}
+#stop{
+    background-color: #FFA8A8;
+    margin: 0 10px 0 10px;
+    padding: 15px 30px 15px 30px;
+}
+#step{
+    background-color: #FFFAA0;
+    margin: 0 10px 0 10px;
+    padding: 15px 30px 15px 30px;
+}
+#reset{
+    font-size: 17px;
+    margin-left: 50px;
+    padding: 15px 30px 15px 30px;
+}
+#randomize{
+    font-size: 17px;
+    margin-left: 25px;
+    padding: 15px 20px 15px 20px;
+}
+.spacer{
+    height: 20px;
+}
+#dead{
+    margin-left: 10px;
+    font-size: 17px;
+    padding: 5px 10px 5px 10px;
+}
+#alive{
+    margin-left: 10px;
+    font-size: 17px;
+    padding: 5px 10px 5px 10px;
+}
+.slider{
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+#title{
+    margin-top: -20px;
+    margin-bottom: 40px;
 }
