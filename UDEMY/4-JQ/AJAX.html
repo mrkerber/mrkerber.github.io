@@ -22,20 +22,24 @@
 
     <div id="main-container">
 
+      <p>
+
+      </p>
 
     </div>
 
     <script type="text/javascript">
 
-      $.ajax("ino.txt").done(function(data) {
+      $.ajax("info.txt").done(function(data) {
 
-        alert(data);
+        $("p").html(data);
 
-      }).fail(function() {
+        })
+        .fail(function() {
 
         alert("Could not access data");
 
-      });
+        });
       /*
       $.get("info.txt", function(data) {
 
