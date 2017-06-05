@@ -27,11 +27,21 @@
 
     <script type="text/javascript">
 
+      $.ajax("ino.txt").done(function(data) {
+
+        alert(data);
+
+      }).fail(function() {
+
+        alert("Could not access data");
+
+      });
+      /*
       $.get("info.txt", function(data) {
 
         alert(data);
 
-      });
+      }); */
 
     </script>
 
