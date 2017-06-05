@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>JQuery Practice</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+
+      #main-container{
+        width:1200px;
+        margin: 0 auto;
+      }
+      .circle{
+        width:200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: red;
+        margin: 10px;
+      }
+      .square{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        margin:10px;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="main-container">
+
+      <div class="circle"></div>
+
+    </div>
+
+    <script type="text/javascript">
+
+      $(".circle").click(function() {
+        $(this).animate({
+            width:"400px",
+            height:"400px",
+            marginLeft:"100px",
+            marginTop:"100px"
+          }, 2000, function() {
+            $(this).css("background-color", "green");
+          });
+      });
+
+      if (typeof jQuery == "undefined") {
+        alert("JQuery is not installed!");
+      }
+
+    </script>
+
+  </body>
+
+</html>
