@@ -31,7 +31,7 @@
           <a class="nav-link" href="fiction.html">Fiction</a>
         </li>
         <li class="nav-item-right">
-          <a class="nav-link disabled" href="videos.html">Videos</a>
+          <a class="nav-link disabled" href="#">Videos</a>
         </li>
       </ul>
     </div>
@@ -113,6 +113,13 @@
           $(".popover").on("mouseleave", function () {
               $(_this).popover('hide');
           });
+        }).on("mouseleave", function () {
+          var _this = this;
+          setTimeout(function () {
+              if (!$(".popover:hover").length) {
+                  $(_this).popover("hide");
+              }
+          }, 300);
         });
     });
   </script>
