@@ -52,7 +52,7 @@
   <div class="container">
     <div class="card-deck">
       <div class="card border-0 mb-2">
-        <a href="Sorting/sorting.html"><img class="card-img-top" src="img/sortIcon.png" /></a>
+        <a href="Sorting/sorting.html"><img class="card-img-top img-focus" src="img/sortIcon.png" /></a>
         <div class="card-body">
           <div class="text-center">
             <h4 class="card-title">Sorting Algorithms</h4>
@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="card border-0 mb-2">
-        <a href="gol/gol.html"><img class="card-img-top" src="img/golIcon.png" /></a>
+        <a href="gol/gol.html"><img class="card-img-top img-focus" src="img/golIcon.png" /></a>
         <div class="card-body">
           <div class="text-center">
             <h4 class="card-title">Conway's Game of Life</h4>
@@ -76,7 +76,9 @@
         </div>
       </div>
       <div class="card border-0 mb-2">
-        <img class="card-img-top" src="img/ehIcon.png" />
+        <img class="card-img-top img-focus" id="eh-icon" src="img/ehIcon.png" data-toggle="popover" title="Seeking funding!" data-content="
+          Event Horizon Magazine is temporarily down as we seek further funding. Please <a href='mailto:mrkerber.cs@gmail.com'>contact us</a> if you would like to donate!
+        " />
         <div class="card-body">
           <div class="text-center">
             <h4 class="card-title">Event Horizon Magazine</h4>
@@ -94,15 +96,26 @@
 
   </div>
 
-
-
-
-
-
   <!--jQuery, Popper.js, bootstrap js-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('[data-toggle="popover"]').popover({
+        placement: 'left',
+        trigger: 'manual',
+        html: true
+      }).on("mouseenter", function () {
+          var _this = this;
+          $(this).popover("show");
+          $(".popover").on("mouseleave", function () {
+              $(_this).popover('hide');
+          });
+        });
+    });
+  </script>
 </body>
 
 </html>
