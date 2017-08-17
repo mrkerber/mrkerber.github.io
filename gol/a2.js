@@ -5,7 +5,7 @@ function cell(location){
     this.aliveNeighbors = 0;
 }
 
-// Control Variables
+// Control Variables 
 var cols = 20;
 var rows = 20;
 var radius = 1;

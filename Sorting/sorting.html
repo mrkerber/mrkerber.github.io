@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Sorting</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="selection-sort.js"></script>
+    <script type="text/javascript" src="sorting.js"></script>
+    <script type="text/javascript" src="merge-sort.js"></script>
+    <script type="text/javascript" src="quick-sort.js"></script>
+
+    <style>
+      body{
+        background-color: #030715;
+        color: white;
+      }
+      .container{
+        margin: 0 auto;
+        width: 1200px;
+        background: red;
+        background: -webkit-linear-gradient(#662233, #441122);
+        background: -o-linear-gradient(#662233, #441122);
+        background: -moz-linear-gradient(#662233, #441122);
+        background: linear-gradient(#662233, #441122);
+      }
+      #graph{
+        margin: 0 auto;
+        width: 1000px;
+        height: 500px;
+        background-color: #441122;
+      }
+      .bar{
+        background-color: green;
+        float: left;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <button id="selection-sort" onclick="selectionSort()">Selection Sort</button>
+      <button id="merge-sort" onclick="mergeSort()">Merge Sort</button>
+      <button id="quick-sort" onclick="quickSort()">Quicksort</button>
+      <button id="random" onclick="createData()">Randomize Data</button> <br />
+
+      <input class="slider" type="range" name="size" min="50" max="1000" value="50" onchange="setDataValues(this.value);"/>
+
+      <p id="current-data">
+        0
+      </p>
+
+    </div>
+
+    <div class="container">
+
+      <div id="graph">
+
+
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
