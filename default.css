@@ -15,7 +15,7 @@ body{
 }
 #footer{
   width: 100%;
-  background-color: #CCCCEE;
+  background-color: #DDDDFF;
   height: 200px;
 }
 h2{
@@ -24,4 +24,7 @@ h2{
 #subheader{
   width: 100%;
   text-align: center;
+}
+.card-body{
+  background-color: #DDDDFF;
 }
