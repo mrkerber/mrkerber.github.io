@@ -7,6 +7,7 @@ body{
   background-image: url("img/galaxy.jpg");
   background-size: cover;
   color: #CCCCEE;
+  background-color: #05090A;
 }
 .jumbotron hr{
   border-color: #05090A;
