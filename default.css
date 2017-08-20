@@ -21,6 +21,9 @@ body{
 h2{
   color: #CCCCEE;
 }
+h1{
+  font-size: .8em;
+}
 #subheader{
   width: 100%;
   text-align: center;
@@ -39,6 +42,5 @@ h2{
   transition: all 1s ease;
 }
 .img-focus:hover {
-  border-radius: 1%;
-  -webkit-filter: blur(2px) grayscale(40%) brightness(90%);
+  -webkit-filter: blur(3px) grayscale(100%) brightness(90%);
 }

@@ -30,6 +30,7 @@ function createData() {
 function setDataValues(size) {
   dataSize = size;
   dataRange = size;
+  $("#dataset").html("" + size);
 }
 
 function setGraphParameters(input) {

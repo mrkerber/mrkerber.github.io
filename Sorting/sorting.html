@@ -5,11 +5,13 @@
 
     <title>Sorting</title>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script type="text/javascript" src="selection-sort.js"></script>
     <script type="text/javascript" src="sorting.js"></script>
     <script type="text/javascript" src="merge-sort.js"></script>
     <script type="text/javascript" src="quick-sort.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
     <style>
       body{
@@ -17,7 +19,7 @@
         color: white;
       }
       .container{
-        margin: 0 auto;
+        text-align: center;
         width: 1200px;
         background: red;
         background: -webkit-linear-gradient(#662233, #441122);
@@ -39,24 +41,36 @@
         background-color: green;
         float: left;
       }
+      #current-data{
+        font-size: .7em;
+        overflow-x: auto;
+      }
+      .slider{
+        width: 300px;
+      }
     </style>
 
   </head>
 
   <body>
 
-    <div class="container">
+    <div class="container mx-auto py-2" id="controls">
 
-      <button id="selection-sort" onclick="selectionSort()">Selection Sort</button>
-      <button id="merge-sort" onclick="mergeSort()">Merge Sort</button>
-      <button id="quick-sort" onclick="quickSort()">Quicksort</button>
-      <button id="random" onclick="createData()">Randomize Data</button> <br />
+      <button class="btn btn-success" id="selection-sort" onclick="selectionSort()">Selection Sort</button>
+      <button class="btn btn-success" id="merge-sort" onclick="mergeSort()">Merge Sort</button>
+      <button class="btn btn-success" id="quick-sort" onclick="quickSort()">Quicksort</button>
+      <button class="btn btn-success" id="random" onclick="createData()">Randomize Data</button> <br />
 
-      <input class="slider" type="range" name="size" min="50" max="1000" value="50" onchange="setDataValues(this.value);"/>
+      <input class="slider my-3" type="range" name="size" min="50" max="1000" value="50" onchange="setDataValues(this.value);"/>
 
-      <p id="current-data">
+      <br />
+      <div>
+        <button class="btn btn-info my-2 mr-3" type="button" data-toggle="collapse" data-target="#current-data" aria-expanded="false" aria-controls="current-data">Show Data</button>
+        Dataset Size: <span id="dataset">50</span>
+      </div>
+      <div class="collapse py-2" id="current-data">
         0
-      </p>
+      </div>
 
     </div>
 
@@ -64,11 +78,13 @@
 
       <div id="graph">
 
-
-
       </div>
 
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
   </body>
 
